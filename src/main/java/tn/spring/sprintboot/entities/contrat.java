@@ -1,6 +1,7 @@
 package tn.spring.sprintboot.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 enum Specialite{
@@ -11,7 +12,7 @@ enum Specialite{
 }
 @Entity
 @Table( name = "Contrat")
-public class contrat{
+public class contrat implements Serializable {
     @Id
     int idContrat;
     Date dateDebutContrat;
